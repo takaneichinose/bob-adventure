@@ -1,0 +1,19 @@
+{
+	"compilerOptions": {
+		"baseUrl": "./src",
+		"paths": {
+			"~*": ["./*"]
+		},
+		"allowJs": true,
+		"declaration": true,
+		"emitDeclarationOnly": true,
+		"outDir": "dist"
+	},
+	"include": ["src/**/*", "index.d.ts"],
+	"typeRoots": [
+		"./node_modules/phaser/types"
+	],
+	"types": [
+		"Phaser"
+	]
+}
