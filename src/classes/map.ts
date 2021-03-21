@@ -1,4 +1,4 @@
-import { Platform } from "./interfaces";
+import { Platform } from "./enumerables";
 
 /**
  * Default playable map
@@ -176,7 +176,7 @@ export default [[
 	Platform.Space,
 	Platform.Space
 ], [
-	Platform.Space,
+	Platform.Alice,
 	Platform.Lawn,
 	Platform.Lawn,
 	Platform.Space,
