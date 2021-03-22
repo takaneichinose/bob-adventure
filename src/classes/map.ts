@@ -174,7 +174,7 @@ export default [[
 	Platform.Space,
 	Platform.Space,
 	Platform.Space,
-	Platform.Space
+	Platform.Block
 ], [
 	Platform.Alice,
 	Platform.Lawn,
@@ -190,23 +190,23 @@ export default [[
 	Platform.Space,
 	Platform.Space,
 	Platform.Space,
-	Platform.Space,
-	Platform.Space
+	Platform.Block,
+	Platform.Block
 ], [
+	Platform.Lawn,
 	Platform.Ground,
 	Platform.Ground,
-	Platform.Ground,
-	Platform.Ground,
-	Platform.Ground,
-	Platform.Ground,
-	Platform.Ground,
-	Platform.Ground,
-	Platform.Ground,
-	Platform.Ground,
-	Platform.Ground,
-	Platform.Ground,
-	Platform.Ground,
-	Platform.Ground,
-	Platform.Ground,
-	Platform.Ground
+	Platform.Lawn,
+	Platform.Lawn,
+	Platform.Lawn,
+	Platform.Lawn,
+	Platform.Lawn,
+	Platform.Lawn,
+	Platform.Lawn,
+	Platform.Lawn,
+	Platform.Lawn,
+	Platform.Lawn,
+	Platform.Lawn,
+	Platform.Lawn,
+	Platform.Lawn
 ]];

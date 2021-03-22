@@ -23,3 +23,29 @@ export enum Platform {
 	 */
 	Space
 }
+
+/**
+ * Event keys, used as a key in animation, and control event
+ */
+export enum EvtKey {
+	/**
+	 * Left key or movement
+	 */
+	Left,
+	/**
+	 * Stop position for left key
+	 */
+	StopLeft,
+	/**
+	 * Right key or movement
+	 */
+	Right,
+	/**
+	 * Stop position for right key
+	 */
+	StopRight,
+	/**
+	 * Jumping action
+	 */
+	Jump
+}
