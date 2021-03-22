@@ -19,6 +19,7 @@ Below are the tools I used for the development:
 1. [NodeJS](https://nodejs.org/en/); The development environment.
 1. [Yarn](https://yarnpkg.com); The package manager I used to install dependencies, etc.
 1. [Visual Studio Code](https://code.visualstudio.com); The editor I used.
+1. [JestJS](https://jestjs.io/); Testing tool.
 
 ## Building
 
