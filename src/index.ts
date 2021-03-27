@@ -26,6 +26,13 @@ import imgLawn from "./images/bob-adventure-img-lawn.png";
 
 class BobAdventureScene extends Phaser.Scene {
 	/**
+	 * Bob Adventure game constructor
+	 */
+	constructor() {
+		super();
+	}
+
+	/**
 	 * Preload the assets to be used in the game
 	 */
 	preload(): void {
