@@ -24,47 +24,56 @@ import imgBlock from "./images/bob-adventure-img-block.png";
 import imgGround from "./images/bob-adventure-img-ground.png";
 import imgLawn from "./images/bob-adventure-img-lawn.png";
 
-// Preload the assets to be used at the game
-function preload(): void {
-	this.load.image(Const.BACKGROUND, imgBackground);
-	this.load.image(Const.BLOCK, imgBlock);
-	this.load.image(Const.GROUND, imgGround);
-	this.load.image(Const.LAWN, imgLawn);
-
-	// Load the spritesheet of Bob
-	this.load.spritesheet(Const.ALICE, sprAlice, {
-		frameWidth: 22,
-		frameHeight: 32
-	});
-}
-
-// Create, and place the assets into the canvas
-function create(): void {
-	// Add background data to the canvas
-	Methods.addBackground(this);
-
-	// Define all the needed platforms for the game
-	Methods.definePlatforms(this);
-
-	// Create the map for the game
-	Methods.createMap();
+class BobAdventureScene extends Phaser.Scene {
+	/**
+	 * Preload the assets to be used in the game
+	 */
+	preload(): void {
+		this.load.image(Const.BACKGROUND, imgBackground);
+		this.load.image(Const.BLOCK, imgBlock);
+		this.load.image(Const.GROUND, imgGround);
+		this.load.image(Const.LAWN, imgLawn);
 	
-	// Check if the position of Alice is set
-	Methods.checkAlicePos();
+		// Load the spritesheet of Bob
+		this.load.spritesheet(Const.ALICE, sprAlice, {
+			frameWidth: 22,
+			frameHeight: 32
+		});
+	}
 
-	// Define the character's settings
-	Methods.defineAlice(this);
+	/**
+	 * Create, and initialize the game canvas
+	 */
+	create(): void {
+		// Add background data to the canvas
+		Methods.addBackground(this);
 	
-	// Define the character's animation settings
-	Methods.defineAliceAnimations(this);
+		// Define all the needed platforms for the game
+		Methods.definePlatforms(this);
+	
+		// Create the map for the game
+		Methods.createMap();
+		
+		// Check if the position of Alice is set
+		Methods.checkAlicePos();
+	
+		// Define the character's settings
+		Methods.defineAlice(this);
+		
+		// Define the character's animation settings
+		Methods.defineAliceAnimations(this);
+	
+		// Add the colliders for the character and platforms
+		Methods.addColliders(this);
+	}
 
-	// Add the colliders for the character and platforms
-	Methods.addColliders(this);
-}
-
-function update(): void {
-	// Define the character's control settings
-	Methods.defineAliceControls(this);
+	/**
+	 * Update the data inside the canvas
+	 */
+	update(): void {
+		// Define the character's control settings
+		Methods.defineAliceControls(this);
+	}
 }
 
 new Phaser.Game({
@@ -92,9 +101,5 @@ new Phaser.Game({
 			debug: false
 		}
 	},
-	scene: {
-		preload: preload,
-		create: create,
-		update: update
-	}
+	scene: [BobAdventureScene]
 });
